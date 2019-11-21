@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>Graphdatenbank Neo4j</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.7.0/css/reveal.css" rel="stylesheet" /><link href="reveal.js-3.7.0/plugin/title-footer/title-footer.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.7.0/css/theme/anderscore.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.7.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.7.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section id="graphdatenbank_neo4j" data-state="no-title-footer"><h2>Graphdatenbank Neo4j</h2></section>
+<section id="ber_mich"><h2>Über mich</h2><div class="paragraph"><p>Code und Slides auf Github:<br />
+<a href="https://github.com/goldschmiede/2019-11-15-Graphdatenbank-neo4j" class="bare">https://github.com/goldschmiede/2019-11-15-Graphdatenbank-neo4j</a><br />
+Twitter: @mjohenneken<br />
+<a href="mailto:max.johenneken@anderscore.com">max.johenneken@anderscore.com</a><br /></p></div>
+<div class="paragraph"><p>Fragen bitte behalten oder aufschreiben und am Ende stellen!</p></div></section>
+<section id="motivation" class="columns"><h2>Motivation</h2><div class="ulist"><ul><li><p>Veranstaltung "Schemalose Datenbanken"</p></li><li><p>Benchmarking von 7 Graphdatenbanken</p></li><li><p>Ausarbeitung &amp; Performance Testing</p></li><li><p>Performance vergleich</p></li></ul></div>
+<div class="paragraph"><p>Erfüllen die Datenbanken was sie versprchen ? Wo gibt es Unterschiede?</p></div>
+<div class="paragraph"><p>Warum macht man das eigentlich so und nicht anders? Einblick in Konzeption Modellierung von Datenbanken.</p></div>
+<div class="paragraph"><p><span class="image"><img src="images/anybody.jpg" alt="anybody" /></span></p></div></section>
+<section id="befrag_die_daten"><h2>Befrag die Daten</h2><div class="paragraph"><p>Welche Produkte kaufen Leute die dieses Produkt gekauft haben?</p></div></section>
+<section id="befrag_die_daten_2"><h2>Befrag die Daten</h2><div class="paragraph"><p>Wie viele Bekannte 3. Grades habe ich?</p></div></section>
+<section id="befrag_die_daten_3"><h2>Befrag die Daten</h2><div class="paragraph"><p>Hat meine Microservice-Architektur zyklische Abhängigkeiten, die zu einem Deadlock führen könnten?</p></div></section>
+<section id="befrag_die_daten_4"><h2>Befrag die Daten</h2><div class="paragraph"><p>Klar! Man braucht Daten! Doch wie halte ich sie vor?</p></div></section>
+<section id="anforderung_an_ein_dbms"><h2>Anforderung an ein DBMS</h2><div class="ulist"><ul><li><p>Speichern, Bearbeiten, Löschen von Daten</p></li><li><p>Konsistenz und Integrität der Daten</p></li><li><p>Dauerhafte Speicherung</p></li><li><p>Effizienter Zugriff</p></li><li><p>Effiziente Speichernutzung</p></li><li><p>Mehrbenutzerbetrieb</p></li><li><p>Zugriffsberechtigungen</p></li></ul></div>
+<div class="paragraph"><p>Wir haben doch Relationale Datenbanken die sich über Jahrzehnte bewährt haben?
+Geht doch!</p></div></section>
+<section id="nutzungsmuster"><h2>Nutzungsmuster</h2><div class="paragraph"><p><strong>Die Technologie sollte das Nutzungsmuster optimal unterstützen</strong></p></div>
+<div class="paragraph"><p>Bankkonto verwalten, Reise buchen<br />
+&#8594; Integrität, Transaktionen, Gemischte Lese/Schreibzugriffe</p></div>
+<div class="paragraph"><p>Session verwalten<br />
+&#8594; Hohe Verfügbarkeit, gemischte Lese/Schreibzugriffe, simple Struktur</p></div>
+<div class="paragraph"><p>Web Forum<br />
+&#8594; Viele Lesezugriffe, wenig Schreibzugriffe, Hohe Verfügbarkeit</p></div>
+<div class="paragraph"><p>Sensor Logging, Application Logs<br />
+&#8594; Viele Schreibzugriffe, keine Relationen, Historie relevant</p></div>
+<div class="paragraph"><p>Produktempfehlungen<br />
+&#8594;Relationen wichtig, Lese/Schreibzugriffe</p></div></section>
+<section id="daten_haben_komplexe_beziehungen"><h2>Daten haben komplexe Beziehungen</h2><div class="paragraph"><p>rund: Objekte, eckig: Attribute</p></div>
+<div class="paragraph"><p><span class="image"><img src="images/graph.png" alt="graph" /></span></p></div>
+<div class="paragraph"><p>Wie speichere ich so etwas in einem (sequentiellen) Speicher ab?
+Das "Wie?" entscheidet über den Einsatz der Technologie</p></div></section>
+<section id="datenbankkonzepte"><h2>Datenbankkonzepte</h2><div class="paragraph"><p>Bankkonto verwalten, Reise buchen<br />
+&#8594; Relationale Datenbanken</p></div>
+<div class="paragraph"><p>Session Verwalten<br />
+&#8594; Key/Value Store</p></div>
+<div class="paragraph"><p>Web Forum<br />
+&#8594; Relationale Datenbanken, Document Stores</p></div>
+<div class="paragraph"><p>Sensor Logging, Application Logs<br />
+&#8594; Wide Colum Store, Time Series DB</p></div>
+<div class="paragraph"><p>Produktempfehlungen<br />
+&#8594; Graph-Datenbanken</p></div></section>
+<section id="graph_datenbanken_use_cases"><h2>Graph Datenbanken Use-Cases</h2><div class="ulist"><ul><li><p>Real-Time Empfehlungssysteme</p></li><li><p>Betrugserkennung</p></li><li><p>graph-basierte Suche</p></li><li><p>Knowledge Graphs</p></li><li><p>Social Media Platformen</p></li><li><p>Source Code analysieren</p></li></ul></div>
+<div class="paragraph"><p>Kategorisierung in Online Transactional Processing(OLTP) und Online Analytical Processing (OLAP)
+Eher für OLAP Anwendungsfälle geeignet.</p></div></section>
+<section id="neo4j_allgemein_als_produkt_alternative_graphdatenbanken_nennen"><h2>Neo4J allgemein als Produkt, Alternative Graphdatenbanken nennen</h2><div class="ulist"><ul><li><p>schemafrei/-optional</p></li><li><p>implementiert in Java/Scala</p></li><li><p>ACID-Transaktionen</p></li><li><p>Datenmodell: Property Graph</p></li><li><p>Abfragesprache: Cypher</p></li></ul></div>
+<div class="paragraph"><p>Alternativen:</p></div>
+<div class="ulist"><ul><li><p>Datastax Enterprise</p></li><li><p>OrientDB</p></li><li><p>ArangoDB</p></li><li><p>MariaDB OQGraph</p></li><li><p>PostgreSQL AgensGraph</p></li></ul></div></section>
+<section id="horizontale_skalierung_mit_neo4j"><h2>horizontale Skalierung mit Neo4j</h2><div class="paragraph"><p>CAP Theorem und Konsistenz</p></div>
+<div class="paragraph"><p><span class="image"><img src="images/cap.png" alt="cap" /></span></p></div>
+<div class="paragraph"><p>(C) Konsistenz<br />
+(A) Availablity<br />
+(P) Partitionstoleranz<br /></p></div>
+<div class="paragraph"><p>Für Neo4j gilt:</p></div>
+<div class="paragraph"><p>Eine Instanz &#8594; Immediate Consistency<br />
+Cluster Betrieb &#8594; BASE Basically Available Soft State Eventual Consistency</p></div></section>
+<section id="cypher_language"><h2>Cypher Language</h2><div class="listingblock"><div class="content"><pre class="CodeRay"><code class="cypher language-cypher">MATCH ( u : User {last: &quot;Doe&quot; }) RETURN u ;</code></pre></div></div>
+<div class="ulist"><ul><li><p>Abfragesprache für Neo4j</p></li><li><p>deklarativ</p></li><li><p>Anfrage auf Property Graphen</p></li><li><p>MATCH - Struktur beschreiben</p></li><li><p>WHERE - Wie SQL</p></li><li><p>RETURN - Werte zurückgeben</p></li><li><p>CREATE, DELETE</p></li><li><p>LOAD CSV - Csv Dateien laden</p></li></ul></div></section>
+<section id="beispiele_fr_cypher"><h2>Beispiele für Cypher</h2><div class="paragraph"><p>Alle geschäftlichen Kontakte bis Tiefe depth von User mit id:</p></div>
+<div class="paragraph"><p><span class="image"><img src="images/sample.png" alt="sample" /></span></p></div></section>
+<section id="anbindung_in_java"><h2>Anbindung in Java</h2><div class="listingblock"><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Driver</span> driver = GraphDatabase.driver(
+  <span class="string"><span class="delimiter">&quot;</span><span class="content">bolt://localhost:7687</span><span class="delimiter">&quot;</span></span>, AuthTokens.basic(<span class="string"><span class="delimiter">&quot;</span><span class="content">neo4j</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">12345</span><span class="delimiter">&quot;</span></span>));
+Session session = driver.session();
+
+<span class="predefined-type">Result</span> result= session.run(
+    <span class="string"><span class="delimiter">&quot;</span><span class="content">MATCH ( u : User )
+    RETURN COUNT( u )
+    AS users ;</span><span class="delimiter">&quot;</span></span>);
+
+session.close();
+driver.close();</code></pre></div></div>
+<div class="paragraph"><p>Alternativ:</p></div>
+<div class="ulist"><ul><li><p>Neo4j-OGM, Anbindung an Spring Data</p></li><li><p>JDBC driver</p></li><li><p>Apache TinkerPop 3</p></li><li><p>REST API</p></li></ul></div></section>
+<section id="neo4j_ogm"><h2>Neo4j-OGM</h2><div class="paragraph"><p><span class="image"><img src="images/mitgliedentity.PNG" alt="mitgliedentity" /></span>
+<span class="image"><img src="images/mitgliedrepo.PNG" alt="mitgliedrepo" /></span></p></div></section>
+<section id="zustzliche_features_wie_einbetten_in_die_anwendung"><h2>Zusätzliche Features wie Einbetten in die Anwendung,</h2><div class="ulist"><ul><li><p>Neo4j als <a href="https://neo4j.com/docs/java-reference/current/tutorials-java-embedded/include-neo4j/">embedded DB</a></p></li><li><p>Trigger (Event Handler)</p></li><li><p>Serverseitige Scripts in Java</p></li></ul></div></section>
+<section id="neo4j_browser"><h2>Neo4j Browser</h2><div class="ulist"><ul><li><p>Abfragen testen und analysieren</p></li><li><p>DB Verwaltung</p></li><li><p>Graphische und tabellarische und JSON Ausgabe,</p></li></ul></div>
+<div class="paragraph"><p><span class="image"><img src="images/neo4j-browser.png" alt="neo4j browser" height="700" /></span></p></div></section>
+<section id="schemalos_schema_optional"><h2>Schemalos / Schema-optional?</h2><div class="ulist"><ul><li><p>kein Schema erforderlich</p></li><li><p>Constraints (unique, Existenz von Properties bei Knoten und Beziehungen)</p></li><li><p>schwächere Struktur &#8594; mehr Fallbehandlungen in der Application</p></li></ul></div>
+<div class="paragraph"><p>Trend: Polyglot Persistence statt zentralen DB Servern und mehreren Anwendungen</p></div>
+<div class="paragraph"><p>Zuständigkeit Datenzugriff wird an die Anwendung abgegeben.</p></div></section>
+<section id="datenmodell_fr_den_benchmark"><h2>Datenmodell für den Benchmark</h2><div class="paragraph"><p><span class="image"><img src="images/model.png" alt="model" /></span></p></div></section>
+<section id="modellierung_von_graphdatenbanken"><h2>Modellierung von Graphdatenbanken</h2><div class="paragraph"><p>Best Practices:</p></div>
+<div class="ulist"><ul><li><p>Modellierng sollte von den gestellten Anfragen abhängig gemacht werden</p></li><li><p>Balance finden zwischen:</p><div class="ulist"><ul><li><p>Jedes Attribut hat seinen eignen Knoten</p></li><li><p>Alle Attribute in einem Knoten speichern</p></li></ul></div></li><li><p>keine BLOBs</p></li><li><p>Indexe</p><div class="ulist"><ul><li><p>beschleunigen Lesezugriffe</p></li><li><p>verlangsamen Schreibzugriffe</p></li><li><p>belegen Speicher</p></li></ul></div></li><li><p>eigene ID benutzen</p></li><li><p>Cypher Befehle analysieren</p></li></ul></div></section>
+<section id="physische_struktur_graphdatenbank"><h2>physische Struktur Graphdatenbank</h2><div class="paragraph"><p>Knoten durch feste größe direkt Addressierbar</p></div>
+<div class="paragraph"><p>Knoten 15Byte<br />
+ID, Labels, Erste Relation, Erster Property Block</p></div>
+<div class="paragraph"><p>Relation 31B<br />
+Typ, Startknoten, Zielknoten, Erster Property Block, nächste und vorherige Relation von Start- und Zielknoten</p></div>
+<div class="paragraph"><p>Property Block 41B<br />
+bis zu 4 Properties jeweils mit ID codierten/<a href="https://neo4j.com/docs/operations-manual/current/performance/property-compression/">komprimierten</a> Property-Wert, Pointer zu String oder Array</p></div></section>
+<section id="datenstze"><h2>Datensätze</h2><div class="paragraph"><p><span class="image"><img src="images/data-table.png" alt="data table" width="1920" /></span></p></div>
+<div class="paragraph"><p><span class="image"><img src="images/data-rel.png" alt="data rel" width="800" /></span></p></div></section>
+<section id="datenimport"><h2>Datenimport</h2><div class="paragraph"><p><span class="image"><img src="images/import.png" alt="import" /></span></p></div></section>
+<section id="messumgebung"><h2>Messumgebung</h2><div class="paragraph"><p><span class="image"><img src="images/env.png" alt="env" /></span></p></div></section>
+<section id="was_wird_gemessen"><h2>Was wird gemessen ?</h2><div class="paragraph"><p><span class="image"><img src="images/measure.png" alt="measure" /></span></p></div></section>
+<section id="selektion_primrschlssel"><h2>Selektion - Primärschlüssel</h2><div class="paragraph"><p><span class="image"><img src="images/selection.png" alt="selection" /></span></p></div></section>
+<section id="selektion_nichtschulsselattribut"><h2>Selektion - Nichtschulüsselattribut</h2><div class="paragraph"><p><span class="image"><img src="images/selection-ns.png" alt="selection ns" /></span></p></div></section>
+<section id="aggregation_anzahl_aller_nutzer"><h2>Aggregation - Anzahl aller Nutzer</h2><div class="paragraph"><p><span class="image"><img src="images/agg-all.png" alt="agg all" /></span></p></div></section>
+<section id="aggregation"><h2>Aggregation</h2><div class="paragraph"><p><span class="image"><img src="images/agg.png" alt="agg" /></span></p></div></section>
+<section id="traversierung_transitive_suche_nach_kontakten_eines_nutzers"><h2>Traversierung - Transitive Suche nach Kontakten eines Nutzers</h2><div class="paragraph"><p><span class="image"><img src="images/trav-1.png" alt="trav 1" /></span></p></div></section>
+<section id="traversierung_transitive_suche_nach_geschftlichen_kontakten_eines_nutzers"><h2>Traversierung - Transitive Suche nach geschäftlichen Kontakten eines Nutzers</h2><div class="paragraph"><p><span class="image"><img src="images/trav-2.png" alt="trav 2" /></span></p></div></section>
+<section id="traversierung_transitive_suche_nach_auslndischen_kontakten_eines_nutzers"><h2>Traversierung - Transitive Suche nach ausländischen Kontakten eines Nutzers</h2><div class="paragraph"><p><span class="image"><img src="images/trav-3.png" alt="trav 3" /></span></p></div></section>
+<section id="evaluation_der_ergebnisse"><h2>Evaluation der Ergebnisse</h2><div class="ulist"><ul><li><p>gute Dokumentation</p></li><li><p>gute Visualisierung mittels Neo4j-Browser</p></li><li><p>intuitive Abfragesprache Cypher</p></li><li><p>Anbindung an Neo4j super einfach</p></li><li><p>positiver Eindruck von der Performance</p></li><li><p>non-blocking Java Api</p></li></ul></div>
+<div class="paragraph"><p>Negativ anzumerken ist:</p></div>
+<div class="ulist"><ul><li><p>unuberlegte Cypher-Anfragen können Neo4j überfordern</p></li><li><p>nur eine DB pro Server</p></li></ul></div></section>
+<section id="abschluss_demo"><h2>Abschluss &amp; Demo</h2><div class="paragraph"><p>Vielen Dank!</p></div>
+<div class="paragraph"><p>Wo siehst du Anwendungsfälle? Probleme? Fragen?</p></div>
+<div class="paragraph"><p>Und jetzt geht&#8217;s ab in den Source-Code:</p></div>
+<div class="ulist"><ul><li><p>Praxisbeispiel: Source-Code-Struktur von SLF4j mit <a href="https://jqassistant.org/">JQAssistant</a> analysieren</p></li></ul></div></section></div></div><script src="reveal.js-3.7.0/lib/js/head.min.js"></script><script src="reveal.js-3.7.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'anderscore',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 1728,
+  height: 972,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.7.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.7.0/plugin/title-footer/title-footer.js', async: true, callback: function()
+          {title_footer.initialize('Graphdatenbank Neo4j', 'Max Johenneken', 'anderScore GmbH • Frankenwerft 35 • 50667 Köln');}},
+      { src: 'reveal.js-3.7.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.7.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.7.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.7.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>
